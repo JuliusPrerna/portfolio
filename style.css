@@ -1,0 +1,4221 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1b1b1b;
+    color: #ffffff;
+}
+
+
+.portfolio-tag {
+    background: #ffffff;
+    color: #333;
+    padding: 5px 15px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.header-text h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.header-text p {
+    font-size: 1.2em;
+    color: #bbbbbb;
+}
+
+.header-image img {
+    border-radius: 20px;
+    width: 300px;
+}
+
+/* Navigation Menu */
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(135deg, #f06, #ffbc00); /* Gradient Background */
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.navbar  li {
+    margin: 0 20px;
+    padding: 5px 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.navbar ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar ul li :hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.navbar ul li :hover {
+    color: #ffbc00; /* Highlight color on hover */
+    transform: translateY(-2px); /* Slight hover effect */
+}
+
+.navbar ul li :focus {
+    outline: none;
+}
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f0a500;
+}
+/* Home Section */
+.home-section {
+    background: linear-gradient(45deg, rgba(56, 98, 255, 0.6), rgba(135, 193, 255, 0.4)); /* Smooth gradient from blue to light blue */
+    position: relative;
+    padding: 100px 20px;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.5s ease, box-shadow 0.3s ease; /* Smooth transition for background and shadow */
+}
+.home-section {
+    background-image: url('./images/ai1.jpeg'); /* Use relative path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff; /* Optional: Ensure text is readable */
+}
+
+.home-section .home-text {
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add contrast for text */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+/* Hover Effect with Subtle Gradient Change */
+.home-section:hover {
+    background: linear-gradient(45deg, rgba(135, 193, 255, 0.8), rgba(56, 98, 255, 0.5)); /* Slightly richer gradient on hover */
+    box-shadow: 0 0 40px rgba(135, 193, 255, 0.3); /* Soft glowing effect on hover */
+}
+
+/* Parallax Effect without images, with subtle light */
+.home-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.3)); /* Light radial gradient for depth */
+    opacity: 0.4;
+    z-index: -1;
+    transform: translateZ(0);
+}
+
+/* Adding Text Glow Effect with Soft Lighting */
+.home-text h1 {
+    color: #fff;
+    text-shadow: 0 0 12px rgba(135, 193, 255, 0.6), 0 0 20px rgba(56, 98, 255, 0.4); /* Soft blue glow */
+}
+
+/* CTA Button Hover Effect */
+.cta-button {
+    background-color: #4f7dbf; /* Soft blue button */
+    padding: 15px 30px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #3b5e90; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.home-image img {
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.home-image img:hover {
+    transform: scale(1.1);
+}
+
+.home-text h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.home-text p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #f0a500;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #333;
+}
+
+
+/* Adjusting the content inside the home-section */
+.home-text {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    z-index: 2; /* Keep text above the background */
+}
+
+/* Heading */
+.home-text h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #ffbc00;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Paragraph text */
+/* Styling for the Home Section Text and Button */
+.home-text p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: #fff; /* Ensure the text is white */
+    margin-bottom: 20px;
+    opacity: 1; /* Make sure the text is fully visible */
+    transition: opacity 0.5s ease;
+}
+
+.home-text a.cta-button {
+    background-color: #ffbc00;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none; /* Remove underline from the link */
+    display: inline-block; /* To make sure the button behaves as a block-level element */
+    transition: background-color 0.3s ease;
+    opacity: 1; /* Ensure the button is visible */
+    visibility: visible; /* Make sure the button is not hidden */
+    margin-top: 20px;
+}
+
+.home-text a.cta-button:hover {
+    background-color: #f06; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Add a z-index to bring the elements above others */
+.home-text {
+    z-index: 2; /* Ensure it’s on top of background */
+}
+
+/* Make sure the background image or section doesn’t overlap */
+.home-section {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* CTA Button */
+.home-text .cta-button {
+    background-color: #ffbc00;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: fadeInUp 2.5s ease-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.home-text .cta-button:hover {
+    background-color: #f06;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Make the CTA button appear after animation */
+.home-text.show .cta-button {
+    opacity: 1;
+    visibility: visible;
+}
+
+//* For background smooth transitions */
+.home-section {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Blue_Futuristic_AI_Instagram_Post.png');
+    position: relative;
+    padding: 100px 20px;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333; /* Fallback color */
+    padding: 0 20px;
+    transition: background 0.5s ease; /* Smooth transition for background */
+}
+
+/* For hover effect */
+.home-section:hover {
+    background: linear-gradient(to right, #4ca1af, #2c3e50); /* Change to a different gradient or color */
+}
+
+/* Adding Parallax Effect */
+/* Adding Parallax Effect */
+.home-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/Blue_Futuristic_AI_Instagram_Post.png') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -2; /* Ensure it’s behind the second image */
+    transform: translateZ(0);
+}
+
+/* Adding a second parallax effect with a new image */
+.home-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("C:\Users\prern\OneDrive\Pictures\prerna pic\WhatsApp Image 2024-07-20 at 14.14.19_d8420f64.jpg") no-repeat center center fixed; /* Replace with your second image */
+    background-size: cover;
+    opacity: 0.3; /* Adjust opacity for subtle effect */
+    z-index: -1; /* Ensure it’s in front of the first image */
+    transform: translateZ(0);
+}
+
+
+
+/* Styling for the home-content section */
+.home-section .home-content {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    max-width: 100%; /* Full width of the screen */
+    width: 100%; /* Full width */
+    height: 500px; /* Fixed height */
+    background-color: #fff; /* White background for the content */
+    border-radius: 20px; /* Rounded corners */
+    padding: 40px;
+    color: #333; /* Text color inside the content */
+    border: 5px solid #ffbc00; /* Gold border for the page */
+    position: relative; /* Required for positioning background image */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Adding a blurred background image */
+.home-section .home-content::before {
+    content: ''; /* Empty content */
+    position: absolute; /* Position the background image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('C:/Users/prern/OneDrive/Pictures/prerna pic/p1-Photoroom.png'); /* Your background image */
+    background-size: cover; /* Cover the entire content area */
+    background-position: center; /* Center the background */
+    filter: blur(8px); /* Blur the background image */
+    z-index: -1; /* Place it behind the content */
+}
+
+/* Home-image styling */
+.home-section .home-content .home-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for the image */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for image */
+.home-section .home-content .home-image img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
+}
+
+/* Optional: Improve the box shadow for the content */
+.home-section .home-content:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for hover effect */
+    transform: scale(1.02); /* Slight zoom-in effect on hover */
+}
+
+
+/* Home Section Text Styling */
+.home-text {
+    max-width: 50%; /* Adjust to limit text width */
+    margin-left: 30px; /* Space between image and text */
+    text-align: left;
+    color: #333;
+    font-family: 'Poppins', sans-serif; /* New font family */
+}
+
+.home-text h1 {
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1.2;
+    background: linear-gradient(to right, #ffbc00, #f06); /* Gradient effect */
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+    margin-bottom: 15px;
+    animation: slideIn 1s ease-out; /* Animation */
+}
+
+/* Styling for paragraphs inside home-text */
+.home-text p {
+    font-size: 1.4em; /* Increase font size for readability */
+    margin-bottom: 25px; /* Adjust space between paragraphs */
+    font-weight: 400; /* Slightly bolder text for better visibility */
+    line-height: 1.7; /* Better line spacing for readability */
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    background: linear-gradient(45deg, #ff7f50, #ff6347, #ff4500, #ff1493); /* Multi-shade gradient */
+    -webkit-background-clip: text; /* Clip the background gradient to the text */
+    color: transparent; /* Make text transparent so the gradient shows through */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Soft text shadow for depth */
+    animation: fadeIn 1.5s ease-out; /* Fade-in animation */
+    padding: 10px; /* Add padding for better spacing */
+}
+
+/* Add custom fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Move the element up on load */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Final position */
+    }
+}
+
+
+/* Call to Action Button */
+.cta-button {
+    padding: 12px 24px;
+    background-color: #ffbc00;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow to make the button stand out */
+}
+
+.cta-button:hover {
+    background-color: #f06;
+    transform: scale(1.05); /* Slight hover scale effect */
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Home Section Image Styling */
+.home-image {
+    position: relative; /* Set position for overlay */
+    display: inline-block;
+    overflow: hidden;
+}
+
+.home-image img {
+    width: 300px; 
+    height: 400px; 
+    border-radius: 20px;
+    border: 5px solid #ffbc00;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    object-fit: cover; /* Ensures image scales correctly */
+}
+
+/* Hover Effects */
+.home-image img:hover {
+    transform: scale(1.1); /* Increase the size of the image on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Enhance the shadow on hover */
+    border-color: #f06; /* Change border color on hover */
+}
+
+/* Image Overlay for Text on Hover */
+.home-image::after {
+    content: "Explore My Work"; /* Text for overlay */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    visibility: hidden; /* Hide overlay initially */
+}
+
+/* Show overlay text on hover */
+.home-image:hover::after {
+    opacity: 1;
+    visibility: visible; /* Make overlay text visible on hover */
+}
+
+/* Add Image Animation */
+@keyframes imageFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade-in animation */
+.home-image img {
+    animation: imageFadeIn 1s ease-out;
+}
+
+/* General Section Styling */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* About Section with Background Image */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    position: relative; /* To position the overlay */
+    overflow: hidden; /* Prevents overflow */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Ensures the video is in the background */
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire section */
+    filter: blur(8px); /* Blur effect to make the text pop */
+}
+
+.about-content {
+    position: relative;
+    z-index: 1; /* Ensures the content is above the video */
+}
+
+/* Styling for the About Section */
+.about-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+/* Section Header Styling */
+.about-section .section-header {
+    text-align: center; /* Centers the header text */
+    margin-bottom: 20px; /* Adds some space below the header */
+}
+
+/* Styling for the Education Section Header */
+.about-section .section-header span {
+    text-align: center; /* Centers the header text */
+    margin-bottom: 20px; /* Adds space below the header */
+}
+
+/* Section Header Span Styling */
+.about-section .section-header span {
+    font-size: 4rem; /* Larger font for prominence */
+    font-weight: 800; /* Extra bold */
+    color: #000; /* Initial black color */
+    text-transform: uppercase; /* Makes text all uppercase */
+    letter-spacing: 4px; /* Adds space between letters */
+    font-family: 'Montserrat', sans-serif; /* Clean, professional sans-serif font */
+    display: inline-block; /* Ensures gradient and animations apply correctly */
+    padding: 10px 20px; /* Padding for spacing */
+    border: 2px solid #ff6a00; /* Outline around text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, color 0.4s ease, box-shadow 0.3s ease; /* Smooth transition */
+    animation: fadeInUp 1s ease-out; /* Fade-in and upward motion on page load */
+}
+
+/* Hover effect for glow and color change */
+.about-section .section-header span:hover {
+    transform: scale(1.1); /* Slightly enlarge text */
+    color: #fff; /* Change text color to white on hover */
+    text-shadow: 0 0 20px rgba(255, 105, 0, 0.8), 0 0 30px rgba(255, 105, 0, 0.6); /* Glowing effect */
+    box-shadow: 0px 0px 30px rgba(255, 105, 0, 0.6); /* Larger shadow on hover */
+}
+
+/* Keyframes for fade-in and upward animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Box styling */
+.about-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* Add styles for box1, box2, etc. as needed */
+
+
+
+
+/* Styling for content inside about-section */
+.about-section .section-header {
+    color: #fff; /* White color for header text */
+    font-size: 2.5rem; /* Large font size */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    z-index: 1; /* Keep text on top of the overlay */
+}
+
+/* About Box with Border */
+.about-box {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border: 5px solid #333; /* Create a border around the box */
+    border-radius: 12px; /* Optional: Rounds the corners of the box */
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* For positioning the background image */
+    overflow: hidden; /* Prevents the background image from overflowing */
+}
+
+/* Background Image Inside Border */
+.about-box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('D:/portfolio/Blue Futuristic Artificial Intelligence Instagram Post.png'); /* Background image */
+    background-size: cover; /* Ensures the image covers the entire box */
+    background-position: center center; /* Centers the background image */
+    z-index: -1; /* Keeps the image behind the content */
+    filter: blur(5px); /* Apply blur effect */
+    background-color: rgba(0, 0, 0, 0.4); /* Dark transparent overlay for better contrast */
+}
+
+
+/* Centered Big Heading */
+.section-header span {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive font size for better scaling */
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    
+    /* Animated gradient text */
+    background: linear-gradient(90deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    background-size: 200% 200%; /* Larger gradient for movement */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    /* Animation to create color-shifting effect */
+    animation: gradientShift 5s ease-in-out infinite;
+
+    /* Initial glow effect */
+    text-shadow: 0 0 10px rgba(255, 126, 95, 0.7), 
+                 0 0 20px rgba(254, 180, 123, 0.7), 
+                 0 0 30px rgba(134, 168, 231, 0.6);
+
+    /* Padding and subtle shadow for depth */
+    padding: 10px 20px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.section-header span:hover {
+    /* Enhanced scaling and glow on hover */
+    transform: scale(1.1);
+    text-shadow: 0 0 15px rgba(255, 126, 95, 1), 
+                 0 0 30px rgba(254, 180, 123, 1), 
+                 0 0 40px rgba(134, 168, 231, 1), 
+                 0 0 50px rgba(145, 234, 228, 0.8);
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Box Container with Flexbox */
+.box-container {
+    display: flex;
+    gap: 20px; /* Space between the two boxes */
+    justify-content: center;
+    width: 100%;
+}
+
+/* Styling for Each Box */
+.about-box {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Styling for the Right Box (Image) */
+.right-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Style for Box 3 (New Box) */
+/* Ensure that box3 is wide enough to hold both box1 and box2 side by side */
+.about-box.box3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 2200px;
+    padding: 100px;
+    border: 10px solid transparent;
+    background-image: linear-gradient(135deg, rgba(255, 0, 204, 0.7), rgba(0, 204, 255, 0.7)); /* Vibrant gradient */
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    height: 500px;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 204, 255, 0.3); /* Soft glowing shadow */
+    transition: all 0.5s ease-in-out;
+}
+
+.about-box.box3::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 30px;
+    background: rgba(0, 204, 255, 0.8);
+    z-index: -1;
+    box-shadow: 0 0 40px rgba(0, 204, 255, 1);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.about-box.box3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 60px rgba(0, 204, 255, 0.6);
+}
+
+.about-box.box3:hover::before {
+    box-shadow: 0 0 80px rgba(0, 204, 255, 1);
+    transform: scale(1.2);
+}
+
+.about-box.box3 .new-content {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: center;
+    z-index: 1;
+}
+
+.about-box.box3 h3 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.about-box.box3 p {
+    font-size: 1.6rem;
+    color: #f0f0f0;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+
+/* Animation for content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for heading */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+/* Styles for box1 and box2 to take equal space and stay side by side */
+.about-box.box1, .about-box.box2 {
+    flex: 1;
+    margin: 10px;
+}
+
+/* Optional: Adjust image size within box1 to fit the layout */
+.about-box.box1 img {
+    width: 100%; /* Makes image responsive within its box */
+    max-width: 200px; /* Limits max width of image */
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* Image Styling */
+.about-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(135, 193, 255, 0.6);
+}
+
+/* Styling for the Left Box (Text) */
+.left-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* About Text Styling */
+.about-text h2 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 250px;
+    opacity: 0.9;
+}
+
+/* Styling for the about-box box1 */
+.about-box.box1 {
+    width: 100%;
+    max-width: 350px; /* Limit the width for better presentation */
+    margin: 20px auto;
+    border-radius: 12px; /* Slightly smaller rounded corners for a sleek look */
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(145deg, #f9f9f9, #f1f1f1); /* Gradient background for depth */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Soft dynamic shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-radius 0.3s ease, filter 0.3s ease, background-position 0.3s ease;
+    cursor: pointer; /* Change cursor on hover */
+    padding: 20px; /* Padding inside the box for space */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevents image overflow */
+}
+
+/* Hover effect for box1 */
+.about-box.box1:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.25); /* Stronger shadow for "lift" effect */
+    background: linear-gradient(145deg, #f1f1f1, #e6e6e6); /* Gradient swap for hover effect */
+    border-radius: 20px; /* More rounding for a stylish hover effect */
+    filter: brightness(1.1) contrast(1.2); /* Subtle brightness and contrast boost */
+    background-position: 100% 100%; /* Smooth animation effect for background */
+}
+
+/* Smooth shadow transition */
+.about-box.box1:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(0, 0, 0, 0.1); /* Light shadow behind */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease-in-out;
+    z-index: -1; /* Place it behind the content */
+}
+
+/* Activate shadow effect when hovering */
+.about-box.box1:hover:before {
+    width: 300%;
+    height: 300%;
+    opacity: 0.3;
+}
+
+/* Optional content enhancement: adding subtle animation for text or elements inside the box */
+.about-box.box1 .about-content {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards; /* Fade-in animation for elements inside */
+}
+
+/* Fade-in keyframe animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+    .about-box.box1 {
+        max-width: 100%; /* Make it full width on smaller screens */
+        margin: 10px 0; /* Adjust margins for small screens */
+    }
+}
+
+
+/* Container for the content */
+.about-box.box1 .about-content {
+    padding: 20px; /* Reduced padding for a thinner feel */
+    background-color: #f4f4f4;
+    border-radius: 8px; /* Smaller border radius for a thinner look */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Reduced shadow for subtle depth */
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Heading styling */
+.about-box.box1 .about-content h2 {
+    font-size: 1.2rem; /* Smaller font size for a thinner appearance */
+    color: #2c3e50;
+    font-weight: 600; /* Slightly lighter font weight */
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for heading */
+.about-box.box1 .about-content h2:hover {
+    transform: translateY(-3px); /* Slight lift for a subtle effect */
+    color: #3498db;
+}
+
+/* Paragraph styling */
+.about-box.box1 .about-content p {
+    font-size: 0.75rem; /* Smaller font size */
+    color: #7f8c8d;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for paragraph */
+.about-box.box1 .about-content p:hover {
+    transform: translateY(2px);
+}
+
+/* Call-to-action button styling */
+.about-box.box1 .cta-button {
+    display: inline-block;
+    padding: 8px 18px; /* Smaller padding for a thinner button */
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem; /* Smaller font size */
+    border-radius: 20px; /* Smaller border radius */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Smaller shadow */
+    transform: translateY(0);
+}
+
+/* Button hover effect */
+.about-box.box1 .cta-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Adding a background animation effect to the box */
+.about-box.box1 .about-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250%;
+    height: 250%;
+    background-color: #3498db;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* Activate background animation on hover */
+.about-box.box1 .about-content:hover::before {
+    width: 0;
+    height: 0;
+    opacity: 0.2;
+}
+
+/* Responsive Flexbox layout for better alignment */
+.about-box.box1 .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+    .about-box.box1 .about-content {
+        padding: 15px; /* Smaller padding on mobile */
+    }
+
+    .about-box.box1 .about-content h2 {
+        font-size: 1rem; /* Adjusted font size for smaller screens */
+    }
+
+    .about-box.box1 .about-content p {
+        font-size: 0.7rem; /* Adjusted paragraph font size */
+    }
+
+    .about-box.box1 .cta-button {
+        font-size: 0.85rem; /* Adjusted button font size */
+        padding: 6px 15px;
+    }
+}
+
+/* Styling for Box 2 */
+.about-box.box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 650px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease, filter 0.3s ease;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+/* Hover effect with floating animation */
+.about-box.box2:hover {
+    animation: floating 3s ease-in-out infinite; /* Apply floating animation only on hover */
+    box-shadow: 0 0 25px 10px rgba(0, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.9);
+    filter: brightness(1.1);
+}
+
+/* Floating animation */
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-8px);
+    }
+    50% {
+        transform: translateY(-15px); /* Peak point of floating */
+    }
+    75% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0); /* Return to original position */
+    }
+}
+
+
+
+/* Clicked animation */
+.about-box.box2.clicked {
+    animation: clickMove 0.3s ease; /* Triggered on click */
+}
+
+/* Define clickMove keyframes */
+@keyframes clickMove {
+    0% {
+        transform: scale(1) translateY(0);
+    }
+    50% {
+        transform: scale(0.95) translateY(10px); /* Move down slightly */
+    }
+    100% {
+        transform: scale(1) translateY(0); /* Return to original position */
+    }
+}
+
+
+
+/* Box 2 text content */
+.about-box.box2 .about-text {
+    text-align: left;
+    color: #2c3e50;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    padding: 25px 20px;
+    border-left: 6px solid #00bcd4; /* Bold left border */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(240, 240, 240, 0.9)); /* Gradient background */
+    border-radius: 12px;
+    box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    overflow: hidden; /* Ensures no content overflows */
+    position: relative;
+}
+
+/* Hover effect for the text content */
+.about-box.box2 .about-text:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 1)); /* Brighten gradient */
+    transform: scale(1.03); /* Slight zoom on hover */
+}
+
+/* Text Shine Animation */
+.about-box.box2 .about-text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    transition: transform 0.4s ease;
+    transform: skewX(-30deg); /* Subtle skew for movement */
+}
+
+.about-box.box2 .about-text:hover::after {
+    left: 100%; /* Moves the shine effect across the box */
+    transition: transform 0.8s ease;
+}
+
+/* Header styling for attention */
+.about-box.box2 .about-text h2 {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #00bcd4; /* Accent color */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Adding subtle entrance animation to each paragraph */
+.about-box.box2 .about-text p {
+    margin: 0;
+    animation: fadeIn 1s ease-in-out both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for an optional action button */
+.about-box.box2 .about-text .action-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about-box.box2 .about-text .action-button:hover {
+    background-color: #008c9e;
+    transform: translateY(-3px); /* Lift the button on hover */
+}
+
+/* Adding an icon or decorative element */
+.about-box.box2 .about-text .icon {
+    font-size: 1.2em;
+    color: #00bcd4;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+
+/* Styling for the heading inside Box 2 */
+.about-box.box2 h2 {
+    font-size: 2.5rem;
+    color: #4e4e9b; /* Dark purple heading color */
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Makes the heading uppercase for emphasis */
+    letter-spacing: 1.5px; /* Spacing between letters */
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Styling for the paragraph text inside Box 2 */
+.about-box.box2 p {
+    font-size: 1.2rem;
+    color: #555; /* Slightly lighter text color */
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out; /* Animation for fade-in effect */
+}
+
+/* Hover effect for Box 2 */
+.about-box.box2:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+/* Box 2: Text on the right */
+.about-box.box2 {
+    width: 100%;
+    max-width: 500px; /* Adjust as per your layout */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Solid background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    text-align: left; /* Align text to the left */
+}
+
+/* Text styling inside Box 2 */
+.about-box.box2 .about-text {
+    color: #333; /* Text color */
+}
+
+/* Heading styling inside Box 2 */
+.about-box.box2 .about-text h2 {
+    font-size: 1.5rem;
+    color: #333; /* Dark color for contrast */
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Uppercase for a bold look */
+    letter-spacing: 2px; /* Slight letter spacing for more emphasis */
+    position: relative; /* For the line below */
+}
+
+/* Adding a decorative line under the heading */
+.about-box.box2 .about-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    background-color: #f39c12; /* Golden color for a striking effect */
+}
+
+/* Paragraph text inside Box 2 */
+.about-box.box2 .about-text p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #555; /* Slightly lighter text color */
+    transition: all 0.3s ease; /* Smooth transition effect */
+    margin-bottom: 15px;
+}
+
+/* Hover effect for paragraph text */
+.about-box.box2 .about-text p:hover {
+    color: #3498db; /* Change color on hover */
+    transform: translateY(-5px); /* Lift the paragraph on hover */
+}
+
+/* Add subtle shadow to the box */
+.about-box.box2 .about-text {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px;
+    background: #fff; /* Ensure background is white for contrast */
+    border-radius: 8px; /* Rounded corners for a smoother look */
+}
+
+/* Apply a smooth fade-in effect when the page loads */
+.about-box.box2 .about-text {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+/* Keyframe for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Cube Container */
+.cube-container {
+    perspective: 1000px; /* Creates a 3D space */
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+}
+
+/* Cube Styling */
+.cube {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(-45deg);
+    animation: rotateCube 10s infinite linear; /* Rotation animation */
+}
+
+/* Cube Faces */
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(135, 193, 255, 0.9); /* Background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Positioning Each Face of the Cube */
+.front  { transform: translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.right  { transform: rotateY(90deg) translateZ(100px); }
+.top    { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+/* Animation for Continuous Rotation */
+@keyframes rotateCube {
+    from {
+        transform: rotateX(-30deg) rotateY(-45deg);
+    }
+    to {
+        transform: rotateX(-30deg) rotateY(315deg);
+    }
+}
+
+/* Styling for the skills section container */
+.skills-section {
+    position: relative;
+    padding: 100px 0; /* Increased padding for a larger section */
+    color: #fff;
+}
+
+/* Styling for the video background */
+.skills-section .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keeps the video behind the content */
+    object-fit: cover; /* Ensure the video covers the section */
+    opacity: 0.7; /* Slightly more transparent for visibility */
+    filter: blur(8px); /* Adds a blur effect */
+}
+
+/* Styling for the section header */
+.skills-section .section-header {
+    text-align: center;
+    font-size: 3rem; /* Larger font size for the section header */
+    margin-bottom: 50px; /* Increased margin to give more space around header */
+}
+
+/* Styling for the container holding the skill boxes */
+.skills-section .skills-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    gap: 30px; /* Increased gap between boxes */
+    justify-items: center;
+    padding: 40px; /* Increased padding for the container */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparent */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow for more depth */
+    max-width: 85%; /* Larger width */
+    margin: 0 auto;
+}
+
+/* Styling for each individual skill box */
+.skills-section .skill-box {
+    background-color: #fff;
+    padding: 20px 30px; /* Increased padding for larger boxes */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    font-size: 1.6rem; /* Larger font size */
+    color: #333;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect for the skill boxes */
+.skills-section .skill-box:hover {
+    transform: translateY(-8px); /* Stronger lift effect on hover */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Responsive adjustments for medium and small screens */
+@media screen and (max-width: 1024px) {
+    .skills-section .skills-box {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+    .skills-section .section-header {
+        font-size: 2.5rem; /* Slightly smaller header on medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skills-section .skills-box {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills-section .skills-box {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .skills-section .section-header {
+        font-size: 2rem; /* Smaller font size for very small screens */
+    }
+}
+/* Styling for each individual skill box */
+/* Styling for the skills container */
+.skills-section .skills-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    gap: 30px; /* Increased gap between the skill boxes */
+    justify-items: center;
+    padding: 40px 50px; /* Larger padding for spacious layout */
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for background */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2); /* Strong shadow for more depth */
+    margin: 0 auto;
+    max-width: 90%; /* Ensures the box doesn't take full width on large screens */
+}
+
+/* Styling for each individual skill box */
+.skills-section .skill-box {
+    background: linear-gradient(135deg, #6e7fdf, #a8c8ff); /* Gradient background */
+    padding: 40px; /* Increased padding for larger boxes */
+    border-radius: 20px; /* Rounded corners for the skill box */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Strong shadow for depth */
+    font-size: 1.8rem; /* Larger font size */
+    color: #fff; /* White text color */
+    text-align: center; /* Center text inside the box */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+    cursor: pointer;
+    width: 100%; /* Takes full width of the grid cell */
+    height: 250px; /* Set a fixed height for the square box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover effect for the skill boxes */
+.skills-section .skill-box:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+    background: linear-gradient(135deg, #a8c8ff, #6e7fdf); /* Reverse the gradient on hover */
+}
+
+/* Optional: Add icons inside each skill box */
+.skills-section .skill-box .icon {
+    font-size: 3rem; /* Larger icon size */
+    margin-bottom: 15px; /* Space between icon and text */
+    display: block;
+}
+
+/* Optional: Add text for skill name */
+.skills-section .skill-box .skill-name {
+    font-size: 1.5rem; /* Adjusted font size for skill name */
+    margin-top: 10px;
+}
+
+/* Responsive behavior for medium screens */
+@media screen and (max-width: 768px) {
+    .skills-section .skills-box {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+/* Responsive behavior for smaller screens */
+@media screen and (max-width: 480px) {
+    .skills-section .skills-box {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}
+/* Styling for each skill box */
+.skills-section .skills-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.skills-section .skill-box {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient background */
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.skills-section .skill-box i {
+    font-size: 2rem; /* Icons size */
+    margin-bottom: 10px; /* Space between icon and text */
+}
+
+.skills-section .skill-box:hover {
+    transform: translateY(-8px); /* Slight lift on hover */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background change */
+}
+
+/* Responsive behavior for smaller screens */
+@media screen and (max-width: 768px) {
+    .skills-section .skills-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills-section .skills-box {
+        grid-template-columns: 1fr;
+    }
+}
+/* Styling for the span inside the skill box */
+.skills-section .skill-box .skill-text {
+    font-size: 1.5rem; /* Increased text size for better visibility */
+    font-weight: bold; /* Bold text */
+    color: white; /* White color for better contrast against darker backgrounds */
+    text-transform: uppercase; /* All caps for emphasis */
+    letter-spacing: 3px; /* Increased letter spacing for a more polished look */
+    transition: transform 0.3s ease, color 0.3s ease, letter-spacing 0.3s ease; /* Smooth transitions for hover effects */
+    display: inline-block; /* Inline-block makes it easy to apply transform */
+    padding: 10px 0; /* Space above and below text */
+}
+
+/* Hover effect for the skill box text */
+.skills-section .skill-box:hover .skill-text {
+    color: #ff7e5f; /* Soft pink color on hover */
+    transform: translateY(-5px); /* Slightly lift the text when hovered */
+    letter-spacing: 5px; /* Increase letter spacing on hover for a more dynamic feel */
+}
+
+/* Add a subtle shadow effect to the text for more depth */
+.skills-section .skill-box .skill-text {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Light shadow for depth */
+}
+
+/* Adding a glowing effect when hovered */
+.skills-section .skill-box:hover .skill-text {
+    text-shadow: 0px 0px 10px rgba(255, 127, 95, 1), 0px 0px 20px rgba(255, 127, 95, 0.8); /* Glowing effect on hover */
+}
+/* Styling for the section header */
+.skills-section .section-header {
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 40px; /* Space below the heading */
+}
+
+/* Styling for the span inside the section header */
+.skills-section .section-header span {
+    font-size: 4rem; /* Bigger font size for a more prominent look */
+    font-weight: 800; /* Bold weight for emphasis */
+    color: #333; /* Darker text color for better readability */
+    text-transform: uppercase; /* Uppercase for boldness */
+    letter-spacing: 4px; /* Space between letters to make it sleek */
+    font-family: 'Montserrat', sans-serif; /* Modern sans-serif font for a clean, professional look */
+    background: linear-gradient(135deg, #ff6a00, #ee0979); /* Cool gradient */
+    -webkit-background-clip: text; /* Apply gradient to the text */
+    background-clip: text; /* For all browsers */
+    display: inline-block; /* Make the span inline-block to adjust background properly */
+    padding: 10px 20px; /* Space around the text */
+    border: 2px solid #ff6a00; /* Border for a more defined look */
+    border-radius: 10px; /* Round the corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow around the box */
+    transition: transform 0.3s ease, color 0.4s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect */
+.skills-section .section-header span:hover {
+    transform: scale(1.1); /* Slightly enlarge text */
+    color: #fff; /* Change text color to white when hovered */
+    text-shadow: 0 0 20px rgba(255, 105, 0, 0.8), 0 0 30px rgba(255, 105, 0, 0.6); /* Glowing effect */
+    box-shadow: 0px 0px 30px rgba(255, 105, 0, 0.6); /* Larger shadow when hovered */
+}
+
+/* Add some animation effect to make the heading appear dynamically */
+.skills-section .section-header span {
+    animation: fadeInUp 1s ease-out; /* Add a fade-in and upward motion on page load */
+}
+
+/* Keyframe for the fade-in animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Education Section */
+.education-section {
+    position: relative; /* Ensure proper positioning */
+    padding: 40px 20px; /* Add padding to create space inside the section */
+    color: white; /* Text color to contrast with background */
+    text-align: center; /* Center the text in the section */
+    overflow: hidden; /* Hide anything that overflows the section */
+}
+
+/* Add blurred background with gradient overlay */
+.education-section::before {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('D:/portfolio/Home.png'), linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)); /* Combine image with gradient */
+    background-size: cover; /* Ensure image covers the entire section */
+    background-position: center center; /* Position the image in the center */
+    background-repeat: no-repeat; /* Prevent image repeat */
+    filter: blur(10px); /* Apply blur effect */
+    z-index: -1; /* Place the pseudo-element behind content */
+}
+
+/* Section Header */
+.education-section .section-header span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.education-section .section-header span:hover {
+    color: #f39c12; /* Gold color on hover */
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12; /* Glow effect */
+}
+
+/* Education Text */
+.education-section .education-content .education-text h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 20px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.education-section .education-content .education-text h2:hover {
+    color: #f39c12; /* Gold color on hover */
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12; /* Glow effect */
+}
+
+.education-section .education-content .education-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.education-section .education-content .education-text p:hover {
+    color: #f39c12; /* Gold color on hover */
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12; /* Glow effect */
+}
+/* Styling for the span inside the education section header */
+.education-section .section-header span {
+    font-size: 4rem; /* Bigger font size for a more prominent look */
+    font-weight: 800; /* Bold weight for emphasis */
+    color: #333; /* Darker text color for better readability */
+    text-transform: uppercase; /* Uppercase for boldness */
+    letter-spacing: 4px; /* Space between letters to make it sleek */
+    font-family: 'Montserrat', sans-serif; /* Modern sans-serif font for a clean, professional look */
+    background: linear-gradient(135deg, #ff6a00, #ee0979); /* Cool gradient */
+    -webkit-background-clip: text; /* Apply gradient to the text */
+    background-clip: text; /* For all browsers */
+    display: inline-block; /* Make the span inline-block to adjust background properly */
+    padding: 10px 20px; /* Space around the text */
+    border: 2px solid #ff6a00; /* Border for a more defined look */
+    border-radius: 10px; /* Round the corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow around the box */
+    transition: transform 0.3s ease, color 0.4s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect */
+.education-section .section-header span:hover {
+    transform: scale(1.1); /* Slightly enlarge text */
+    color: #fff; /* Change text color to white when hovered */
+    text-shadow: 0 0 20px rgba(255, 105, 0, 0.8), 0 0 30px rgba(255, 105, 0, 0.6); /* Glowing effect */
+    box-shadow: 0px 0px 30px rgba(255, 105, 0, 0.6); /* Larger shadow when hovered */
+}
+
+/* Add some animation effect to make the heading appear dynamically */
+.education-section .section-header span {
+    animation: fadeInUp 1s ease-out; /* Add a fade-in and upward motion on page load */
+}
+
+/* Keyframe for the fade-in animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Centering and layout styling */
+.education-section .education-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.education-images-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between images */
+    margin-top: 20px;
+}
+
+/* Styling for each container with image and text */
+.education-logo-container,
+.education-profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px; /* Set max-width for text alignment */
+    text-align: center; /* Center text below image */
+}
+
+/* Round images with shadow */
+.education-logo,
+.education-profile {
+    width: 120px; /* Size */
+    height: 120px;
+    border-radius: 50%; /* Round shape */
+    object-fit: cover;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transition for transform and shadow */
+    border: 4px solid transparent; /* Invisible border for glow effect */
+    background-image: linear-gradient(white, white), linear-gradient(135deg, #ff6a00, #ee0979); /* Gradient border */
+    background-origin: border-box;
+    background-clip: content-box, border-box; /* Clips background for gradient border effect */
+}
+
+/* Hover effect for zoom and rotation with glow */
+.education-logo:hover,
+.education-profile:hover {
+    transform: scale(1.15) rotate(5deg); /* Slight zoom and rotate */
+    box-shadow: 0px 8px 25px rgba(255, 105, 0, 0.5); /* Increased shadow glow */
+    border: 4px solid; /* Reinforces the border on hover */
+    animation: glow 1s ease-in-out infinite alternate; /* Glow animation */
+}
+
+/* Keyframes for glowing animation */
+@keyframes glow {
+    from {
+        border-color: #ff6a00;
+    }
+    to {
+        border-color: #ee0979;
+    }
+}
+
+/* General styling for .education-image-box */
+.education-image-box {
+    display: inline-block;
+    text-align: center;
+    width: 400px; /* Adjust width as needed */
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #f5f5f5; /* Light background for the box */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Regular shadow */
+    transition: transform 0.3s ease, box-shadow 0.4s ease; /* Smooth transition */
+    margin: 15px; /* Adds spacing between boxes */
+    border: 2px solid transparent; /* Allows border color on hover */
+}
+
+/* Hover effect for glowing animation */
+.education-image-box:hover {
+    transform: scale(1.05); /* Slightly enlarges box */
+    box-shadow: 0px 0px 30px rgba(255, 105, 0, 0.7), 0px 0px 50px rgba(238, 9, 121, 0.6); /* Adds glowing shadow */
+    border-color: rgba(255, 105, 0, 0.7); /* Border with glow color */
+    animation: glowEffect 1.5s ease-in-out infinite alternate; /* Infinite glow animation */
+}
+
+/* Keyframes for the glowing animation */
+@keyframes glowEffect {
+    from {
+        box-shadow: 0px 0px 30px rgba(255, 105, 0, 0.5), 0px 0px 50px rgba(238, 9, 121, 0.4);
+    }
+    to {
+        box-shadow: 0px 0px 45px rgba(255, 105, 0, 0.8), 0px 0px 60px rgba(238, 9, 121, 0.6);
+    }
+}
+
+
+/* Styling for circular images with gradient borders and glow */
+.education-logo,
+.education-profile {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover;
+    border: 4px solid transparent; /* Space for gradient border */
+    background-image: linear-gradient(white, white), linear-gradient(135deg, #ff6a00, #ee0979); /* Gradient border */
+    background-origin: border-box;
+    background-clip: content-box, border-box; /* Applies gradient border */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow around image */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth zoom effect */
+}
+
+/* Hover effect for zoom and dynamic border glow */
+.education-logo:hover,
+.education-profile:hover {
+    transform: scale(1.15); /* Slight zoom on hover */
+    box-shadow: 0px 10px 20px rgba(255, 105, 0, 0.5); /* Soft glow */
+    animation: borderGlow 1s ease-in-out infinite alternate; /* Animated border glow */
+}
+
+/* Keyframes for gradient border glow */
+@keyframes borderGlow {
+    from {
+        border-color: #ff6a00;
+    }
+    to {
+        border-color: #ee0979;
+    }
+}
+
+/* Centered text below each image with glow effect */
+.education-text {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(255, 105, 0, 0.8); /* Text glow */
+}
+
+
+/* Text under each image */
+.education-text {
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Styling text below each image */
+.education-logo-container p,
+.education-profile-container p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* General styling for each education item */
+.education-item {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styling for year range */
+.education-year {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff6a00;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Styling for institution name */
+.education-institution {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Styling for degree title */
+.education-degree {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Styling for honors and GPA */
+.education-honors {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #777;
+    font-style: italic;
+}
+
+/* Hover effect for each education item */
+.education-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+/* Styling for the span inside the certificates section header */
+/* Styling for the span inside the section header */
+
+.certificates-section .section-header span { 
+    font-size: 4rem; /* Bigger font size for a more prominent look */
+    font-weight: 800; /* Bold weight for emphasis */
+    color: #333; /* Darker text color for better readability */
+    text-transform: uppercase; /* Uppercase for boldness */
+    letter-spacing: 4px; /* Space between letters to make it sleek */
+    font-family: 'Montserrat', sans-serif; /* Modern sans-serif font for a clean, professional look */
+    background: linear-gradient(135deg, #ff6a00, #ee0979); /* Cool gradient */
+    -webkit-background-clip: text; /* Apply gradient to the text */
+    background-clip: text; /* For all browsers */
+    display: inline-block; /* Make the span inline-block to adjust background properly */
+    padding: 10px 20px; /* Space around the text */
+    border: 2px solid #ff6a00; /* Border for a more defined look */
+    border-radius: 10px; /* Round the corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow around the box */
+    transition: transform 0.3s ease, color 0.4s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect */
+.certificates-section .section-header span:hover {
+    transform: scale(1.1); /* Slightly enlarge text */
+    color: #fff; /* Change text color to white when hovered */
+    text-shadow: 0 0 20px rgba(255, 105, 0, 0.8), 0 0 30px rgba(255, 105, 0, 0.6); /* Glowing effect */
+    box-shadow: 0px 0px 30px rgba(255, 105, 0, 0.6); /* Larger shadow when hovered */
+}
+
+/* Add some animation effect to make the heading appear dynamically */
+.certificates-section .section-header span {
+    animation: fadeInUp 1s ease-out; /* Add a fade-in and upward motion on page load */
+}
+
+/* Keyframe for the fade-in animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.certificates-section {
+    background-image: url('D:/portfolio/certificates.png'); /* Add your image path here */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    padding: 50px 0; /* Adjust the padding as needed */
+    color: #fff; /* Ensure text is visible over the background */
+}
+
+.certificates-section .section-header span {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #ff6a00;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, color 0.4s ease, box-shadow 0.3s ease;
+}
+
+.certificates-section .section-header span:hover {
+    transform: scale(1.1);
+    color: transparent; /* Make the text transparent to show the gradient */
+    background: linear-gradient(135deg, #ff6a00, #ee0979, #f39c12, #1e90ff); /* Multi-color gradient */
+    -webkit-background-clip: text; /* For Webkit browsers */
+    background-clip: text; /* Apply gradient to the text */
+    text-shadow: 0 0 20px rgba(255, 105, 0, 0.8), 0 0 30px rgba(255, 105, 0, 0.6); /* Glowing effect */
+    box-shadow: 0px 0px 30px rgba(255, 105, 0, 0.6); /* Larger shadow when hovered */
+}
+
+
+.certificates-section .certificates-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.certificates-section .certificates-content li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+
+/* Certificate Content List Items */
+.certificates-section .certificates-content ul li {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for list items */
+.certificates-section .certificates-content ul li:hover {
+    color: #f39c12; /* Gold color on hover */
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12; /* Glowing effect */
+}
+
+
+/* Certificates Section */
+.certificates-section {
+    background-color: #333;
+    padding: 50px 20px;
+}
+
+.certificates-content ul {
+    list-style: none;
+    color: #bbbbbb;
+}
+
+
+.certificates-content li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.certificates-section {
+    padding: 50px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.section-header span {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.certificates-content {
+    margin-top: 30px;
+}
+
+.certificate-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    perspective: 1200px;
+}
+
+.certificate-box {
+    background: #2c3e50;
+    color: white;
+    padding: 25px;
+    margin: 10px;
+    width: 350px;
+    height: 189px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.certificate-box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.certificate-box:hover:before {
+    opacity: 1;
+}
+
+.certificate-box:hover {
+    transform: rotateY(15deg) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    filter: brightness(1.3);
+}
+
+.certificate-box:hover .certificate-front {
+    transform: rotateY(180deg);
+}
+
+.certificate-box:hover .certificate-back {
+    transform: rotateY(0deg);
+}
+
+.certificate-box .certificate-front,
+.certificate-box .certificate-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.certificate-box .certificate-front {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.certificate-box .certificate-back {
+    background: #34495e;
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Neon Glow Effect */
+.certificate-box:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+    border: 2px solid #8e44ad;
+}
+
+/* Pulse Animation for Text */
+@keyframes pulse {
+    0% {
+        color: #ecf0f1;
+        transform: scale(1);
+    }
+    50% {
+        color: #8e44ad;
+        transform: scale(1.1);
+    }
+    100% {
+        color: #ecf0f1;
+        transform: scale(1);
+    }
+}
+
+.certificate-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.certificate-box ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite;
+}
+
+.certificate-box ul li strong {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Media Queries */
+@media (max-width: 300px) {
+    .certificate-box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 200px) {
+    .certificate-box {
+        width: 90%;
+    }
+}
+/* Basic Styles for List */
+.certificates-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.certificates-section li {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ecf0f1;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #34495e;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.certificates-section li:hover {
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Subtle gradient */
+    color: #fff;
+    transform: translateY(-5px) scale(1.05); /* Smooth lift and zoom */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Adding a glowing effect for text on hover */
+.certificates-section li:hover span {
+    text-shadow: 0 0 15px #fff, 0 0 30px #ff00cc, 0 0 45px #ff00cc;
+    animation: textGlow 1.5s ease-in-out infinite;
+}
+
+/* Pulse Glow Animation for Text */
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #ff00cc;
+    }
+    50% {
+        text-shadow: 0 0 20px #ff00cc, 0 0 40px #ff00cc, 0 0 50px #ff00cc;
+    }
+    100% {
+        text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #ff00cc;
+    }
+}
+
+/* Adding Icon for List Items */
+.certificates-section li::before {
+    content: '\2022'; /* Bullet icon */
+    font-size: 25px;
+    color: #ff6f61;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Icon Animation */
+.certificates-section li:hover::before {
+    transform: rotate(360deg);
+    color: #fff;
+}
+
+/* Subtle Underline Effect */
+.certificates-section li span {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.certificates-section li:hover span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    animation: underlineEffect 0.3s forwards;
+}
+
+/* Underline Animation */
+@keyframes underlineEffect {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certificates-section li {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+/* Projects Section */
+.projects-section {
+    background-image: url("D:/portfolio/1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden;
+    background-attachment: fixed; /* Parallax scrolling effect */
+}
+
+/* Projects Section */
+.projects-section {
+    background-image: url("D:/portfolio/1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden;
+    background-attachment: fixed; /* Parallax scrolling effect */
+}
+
+/* Add a stronger blur with vibrant gradient overlay */
+.projects-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 0, 150, 0.7), rgba(0, 204, 255, 0.7)); /* Vibrant gradient overlay */
+    mix-blend-mode: overlay; /* Blends the gradient overlay with the image */
+    filter: blur(/* Projects Section */
+.projects-section {
+    background-image: url("D:/portfolio/1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden;
+    background-attachment: fixed; /* Parallax scrolling effect */
+    filter: blur(15px); /* Blur effect for background image */
+}
+
+/* Add an animated gradient overlay with vibrant colors */
+.projects-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 0, 150, 0.7), rgba(0, 204, 255, 0.7));
+    mix-blend-mode: overlay; /* Blends the gradient overlay with the image */
+    animation: gradientAnimation 6s infinite alternate; /* Smooth gradient animation */
+    filter: blur(10px); /* Slight blur for the overlay */
+    z-index: 1;
+    opacity: 0.9; /* Slight transparency for a soft effect */
+}
+
+/* Animation for the gradient overlay */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(45deg, rgba(255, 0, 150, 0.7), rgba(0, 204, 255, 0.7));
+    }
+    50% {
+        background: linear-gradient(45deg, rgba(0, 204, 255, 0.7), rgba(255, 255, 0, 0.7));
+    }
+    100% {
+        background: linear-gradient(45deg, rgba(255, 255, 0, 0.7), rgba(255, 0, 150, 0.7));
+    }
+}
+
+/* Content styling */
+.projects-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Adds smooth transition on hover */
+}
+
+/* Text styling for visibility */
+.projects-content p {
+    font-size: 1.3em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Stronger shadow for text */
+}
+
+/* Hover effects for content */
+.projects-content:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    filter: brightness(1.2); /* Increase brightness on hover */
+}
+
+/* Parallax background movement */
+.projects-section {
+    position: relative;
+    background: url("D:/portfolio/1.jpg") center center / cover no-repeat;
+    background-attachment: fixed;
+    animation: parallaxEffect 12s infinite linear; /* Parallax effect */
+}
+
+/* Parallax effect */
+@keyframes parallaxEffect {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+0px); /* Stronger blur effect */
+    z-index: 1;
+    animation: gradientAnimation 6s infinite alternate; /* Smooth gradient animation */
+    opacity: 0.9; /* Slightly increase transparency for a softer effect */
+}
+
+/* Animation for the gradient overlay */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(45deg, rgba(255, 0, 150, 0.7), rgba(0, 204, 255, 0.7));
+    }
+    50% {
+        background: linear-gradient(45deg, rgba(0, 204, 255, 0.7), rgba(255, 255, 0, 0.7));
+    }
+    100% {
+        background: linear-gradient(45deg, rgba(255, 255, 0, 0.7), rgba(255, 0, 150, 0.7));
+    }
+}
+
+/* Content styling */
+.projects-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.projects-content p {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Stronger text shadow for better visibility */
+}
+
+/* Projects Section Header */
+.projects-section .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Main Heading Styling with Multicolor Effect */
+.main-heading {
+    font-size: 5em; /* Larger font size for maximum impact */
+    font-weight: 900; /* Ultra bold text */
+    color: transparent; /* Text color transparent to show gradient */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    letter-spacing: 5px; /* Slight spacing between letters for a modern feel */
+    position: relative;
+    display: inline-block;
+    padding: 20px 40px; /* Padding around the text */
+    border: 2px solid #ff6a00; /* Border for emphasis */
+    border-radius: 10px; /* Rounded corners for a modern effect */
+    background: linear-gradient(45deg, #ff6a00, #ee0979, #00bcd4, #8e24aa, #ffeb3b); /* Multicolor gradient */
+    background-size: 400% 400%; /* Make gradient larger for smooth animation */
+    background-clip: text; /* Gradient effect applied to text */
+    -webkit-background-clip: text;
+    text-shadow: 0 0 8px #ff6a00, 0 0 15px #ff6a00, 0 0 30px #ff6a00, 0 0 40px #ee0979; /* Glowing shadow for depth */
+    animation: glowEffect 2s infinite alternate, rainbowShift 6s ease infinite, sparkle 1s infinite; /* Glowing, rainbow shift, and sparkle effect */
+}
+
+/* Glowing text animation */
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 10px #ff6a00, 0 0 20px #ff6a00, 0 0 30px #ff6a00;
+    }
+    50% {
+        text-shadow: 0 0 20px #ee0979, 0 0 40px #ee0979, 0 0 50px #ee0979;
+    }
+    100% {
+        text-shadow: 0 0 10px #ff6a00, 0 0 20px #ff6a00, 0 0 30px #ff6a00;
+    }
+}
+
+/* Rainbow color shifting effect */
+@keyframes rainbowShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Sparkle Effect - Creating shining particles */
+@keyframes sparkle {
+    0% {
+        text-shadow: 0 0 8px #ff6a00, 0 0 15px #ff6a00, 0 0 25px #ff6a00;
+    }
+    50% {
+        text-shadow: 0 0 10px #ff6a00, 0 0 20px #ee0979, 0 0 40px #ffeb3b;
+    }
+    100% {
+        text-shadow: 0 0 8px #ff6a00, 0 0 15px #ff6a00, 0 0 30px #ff6a00, 0 0 45px #8e24aa;
+    }
+}
+
+/* Hover effect for more interaction */
+.main-heading:hover {
+    text-shadow: 0 0 25px #ff6a00, 0 0 50px #ff6a00, 0 0 75px #ff6a00; /* More intense glow on hover */
+    transform: scale(1.1); /* Slightly increase size on hover for more interaction */
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Add animation for smooth entrance */
+.projects-section .section-header {
+    animation: fadeInFromTop 1s ease-out;
+}
+
+@keyframes fadeInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Main Content Styling */
+.projects-content {
+    padding: 30px;
+    background-color: transparent; /* Transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for the entire project content */
+.projects-content:hover {
+    transform: scale(1.05); /* Slight scale effect when hovering over the content */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* Enhanced shadow on hover */
+}
+
+/* Styling for Project Titles */
+.projects-content .project-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px; 
+    position: relative;
+    padding: 10px 0;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, letter-spacing 0.3s ease-in-out;
+}
+
+/* Hover effect for Project Titles - Moves text upwards */
+.projects-content .project-title:hover {
+    transform: translateY(-10px); 
+    color: #ff6a00; /* Change text color */
+    letter-spacing: 5px; /* Increase letter-spacing */
+    cursor: pointer;
+}
+
+/* General styles for project titles */
+.projects-content .project-title {
+    position: relative;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    padding-left: 30px; /* Add padding to make room for the icon */
+}
+
+/* House Hunt: House Price Prediction using AI logo */
+.projects-content .project-title.house-hunt::before {
+    content: url('https://img.icons8.com/ios/50/000000/home.png'); /* Home icon */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Online Examination System logo */
+.projects-content .project-title.online-exam::before {
+    content: url('https://img.icons8.com/ios/50/000000/paper-and-pen.png'); /* Paper and pen icon */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+/* Make My Home: Personal Home Management System logo */
+.projects-content .project-title.make-my-home::before {
+    content: url('https://img.icons8.com/ios/50/000000/home.png'); /* Home icon */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+/* Organic Food Supply System logo */
+.projects-content .project-title.organic-food::before {
+    content: url('https://img.icons8.com/ios/50/000000/vegetarian-food.png'); /* Food icon */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Movie Recommendation System logo */
+.projects-content .project-title.movie-recommendation::before {
+    content: url('https://img.icons8.com/ios/50/000000/robot.png'); /* Robot icon */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for each icon */
+.projects-content .project-title:hover::before {
+    transform: translateY(-50%) rotate(360deg); /* Rotate icon on hover */
+}
+
+
+
+
+/* Hover Effect on Project Title Icon */
+.projects-content .project-title:hover::before {
+    transform: translateY(-50%) rotate(360deg); /* Rotates the logo/icon on hover */
+}
+
+/* Adding Hover Effects for the Project Description */
+.projects-content p {
+    font-size: 1.2em;
+    color: #d3d3d3; /* Light gray text */
+    line-height: 1.5;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover effect for project description */
+.projects-content p:hover {
+    transform: translateX(10px); /* Slightly shift description on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
+/* Optional: Add background color effect when hovering over the content area */
+.projects-content:hover {
+    background: linear-gradient(45deg, rgba(255, 106, 0, 0.7), rgba(238, 9, 121, 0.7)); /* Gradient background on hover */
+    color: #fff; /* Text color when background changes */
+    transform: scale(1.03); /* Slightly scale content */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Enhanced shadow */
+}
+/* General styling for all project titles */
+.projects-content .project-title {
+    font-size: 1.5em; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    color: #333; /* Set text color */
+    position: relative;
+    margin: 15px 0; /* Add spacing between projects */
+    padding-left: 40px; /* Create space for icons */
+    display: inline-block; /* Keep inline layout */
+    text-transform: uppercase; /* Make titles uppercase for emphasis */
+    letter-spacing: 1px; /* Slight letter spacing for a clean look */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover effect for project titles */
+.projects-content .project-title:hover {
+    color: #ee0979; /* Change text color on hover */
+    transform: translateX(10px); /* Subtle move to the right */
+    text-shadow: 0 0 10px rgba(238, 9, 121, 0.8); /* Add glowing effect */
+}
+
+/* Icon styling for project titles */
+.projects-content .project-title::before {
+    content: ''; /* Placeholder for individual project icons */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px; /* Icon size */
+    height: 24px; /* Icon size */
+    background-size: cover; /* Ensure the icon fits */
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Specific icon for Online Examination System */
+.projects-content .project-title.online-exam::before {
+    content: url('https://img.icons8.com/ios/50/000000/paper-and-pen.png');
+}
+
+/* Hover effect for icons */
+.projects-content .project-title:hover::before {
+    transform: translateY(-50%) scale(1.2); /* Slight zoom effect */
+}
+/* General paragraph styling */
+.projects-content p {
+    font-size: 1.2em; /* Readable font size */
+    line-height: 1.8;
+    color: #333; /* Neutral text color */
+    margin: 20px 0;
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.95); /* Slightly transparent background */
+    border-radius: 16px; /* Softer edges */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    border: 2px solid transparent;
+    background-clip: padding-box; /* Maintain clean borders */
+    transition: transform 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Decorative glow effects */
+.projects-content p::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 105, 135, 0.6), transparent 80%);
+    opacity: 0.7;
+    transform: rotate(45deg);
+    animation: pulseGlow 5s infinite;
+    pointer-events: none;
+}
+
+/* Glow animation */
+@keyframes pulseGlow {
+    0%, 100% {
+        transform: scale(1) rotate(45deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(45deg);
+    }
+}
+
+/* Dynamic hover effects */
+.projects-content p:hover {
+    transform: translateY(-10px) scale(1.02); /* Lift and zoom */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* Deeper shadow */
+    border-color: #ff6a00; /* Highlight with bold border */
+}
+
+/* Gradient hover border effect */
+.projects-content p:hover {
+    border-image: linear-gradient(135deg, #ff105f, #ffad06) 1; /* Vibrant gradient border */
+}
+
+/* Decorative icon animations */
+.projects-content p::after {
+    content: "✨"; /* Default magic sparkle icon */
+    font-size: 2.5em;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    opacity: 0.5;
+    animation: sparkleMove 3s infinite ease-in-out;
+}
+
+/* Sparkle animation */
+@keyframes sparkleMove {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.3) rotate(30deg);
+        opacity: 1;
+    }
+}
+
+/* Typography styling */
+.projects-content p strong {
+    color: #ff6a00; /* Highlight important words */
+    font-weight: bold;
+    text-shadow: 0px 2px 5px rgba(255, 106, 0, 0.6);
+}
+
+/* First-line animation */
+.projects-content p::first-line {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #ff3f8b;
+    letter-spacing: 1px;
+    animation: slideInText 1s ease-out;
+}
+
+/* Text animation */
+@keyframes slideInText {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Paragraph icon-based hover effect */
+.projects-content p:hover::after {
+    content: "🚀"; /* Icon changes dynamically on hover */
+    transform: scale(1.4) rotate(-15deg);
+    opacity: 1;
+}
+.projects-content .project-title.house-hunt::before {
+    content: url('https://upload.wikimedia.org/wikipedia/commons/a/a4/House_icon.svg'); /* Example house icon */
+    position: absolute;
+    left: -25px; /* Adjust position relative to the heading */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+/* Internship Content with Animated Glowing Background */
+.internship-content {
+    position: relative;
+    padding: 50px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 0, 255, 0.8), rgba(0, 204, 255, 0.8)); /* Gradient base */
+    background-size: 400% 400%; /* Make the gradient large */
+    animation: gradientFlow 6s ease infinite; /* Apply the gradient animation */
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.8); /* Glowing effect */
+}
+
+/* Animated Gradient Effect */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Neon Glowing Effect for Text */
+.internship-company,
+.internship-duration,
+.internship-responsibilities-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 25px rgba(0, 255, 255, 0.8); /* Neon glow effect */
+}
+
+/* Glowing Effect for Cards */
+.internship-card {
+    position: relative;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(0, 255, 255, 0.5); /* Neon glow effect */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Glow Effect for Cards */
+.internship-card:hover {
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.8), 0 0 100px rgba(0, 255, 255, 0.8); /* Brighter glow */
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+/* Optional: Add a subtle moving particle effect on the background */
+@keyframes particleMovement {
+    0% {
+        transform: translate(-200px, -200px);
+    }
+    50% {
+        transform: translate(200px, 200px);
+    }
+    100% {
+        transform: translate(-200px, -200px);
+    }
+}
+
+.particle-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://example.com/particle-effect.svg'); /* You can use a particle image or effect here */
+    animation: particleMovement 6s ease-in-out infinite;
+    opacity: 0.2;
+    z-index: -1;
+}
+/* Logo Styling */
+.internship-logo {
+    width: 30px; /* Adjust the width of the logo */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+    vertical-align: middle; /* Aligns the logo in the middle with the text */
+}
+
+/* Internship Company Title Styling */
+.internship-company {
+    display: flex; /* Enables flexbox for horizontal alignment */
+    align-items: center; /* Vertically aligns the logo with the text */
+    font-size: 1.8em; /* Makes the title text larger */
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+/* Internship Card Styles */
+.internship-card {
+    background: linear-gradient(45deg, #ff4081, #00bcd4); /* Gradient background */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+/* Hover effect for Internship Card */
+.internship-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Logo Styling */
+.internship-logo {
+    width: 35px; /* Adjust logo size */
+    height: auto;
+    margin-right: 15px; /* Space between logo and text */
+    vertical-align: middle; /* Center alignment */
+    transition: transform 0.3s ease; /* Animation on hover */
+}
+
+/* Title Styling */
+.internship-company {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    transition: color 0.3s ease; /* Transition effect */
+}
+
+.internship-company:hover {
+    color: #ff9800; /* Change color on hover */
+}
+
+/* Hover effect on logo */
+.internship-logo:hover {
+    transform: rotate(360deg); /* Rotate logo on hover */
+}
+
+/* Duration Text Styling */
+.internship-duration {
+    font-size: 1.2em;
+    color: white;
+    margin-top: 10px;
+    font-weight: 500;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.internship-duration:hover {
+    opacity: 1; /* Make text stand out on hover */
+}
+
+/* Add glow animation to the entire card */
+.internship-card {
+    background: linear-gradient(45deg, #ff4081, #00bcd4); /* Gradient background */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease-in-out;
+    filter: brightness(1);
+}
+
+.internship-card:hover {
+    filter: brightness(1.3); /* Glow effect on hover */
+}
+/* Styling the Responsibilities Heading */
+.internship-responsibilities-title {
+    font-size: 2em; /* Increase font size for more emphasis */
+    font-weight: bold; /* Bold text for better impact */
+    color: #ff4081; /* Vibrant color for the text */
+    margin-bottom: 20px; /* More space below the heading */
+    position: relative; /* Needed for the underline animation */
+    text-transform: uppercase; /* Uppercase letters for emphasis */
+    letter-spacing: 3px; /* Increased spacing for stylish effect */
+    animation: headingAnimation 1s ease-out, glowingText 2s ease-in-out infinite alternate; /* Animations for the heading */
+}
+
+/* Glowing Animation for the Heading Text */
+@keyframes glowingText {
+    0% {
+        text-shadow: 0 0 5px #ff4081, 0 0 10px #ff4081, 0 0 20px #ff4081;
+    }
+    100% {
+        text-shadow: 0 0 10px #ff4081, 0 0 30px #ff4081, 0 0 40px #ff4081;
+    }
+}
+
+/* Add a glowing underline with a gradient effect */
+.internship-responsibilities-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position it below the text */
+    width: 100%;
+    height: 3px; /* Increased thickness of the underline */
+    background: linear-gradient(90deg, #ff4081, #00bcd4); /* Gradient effect */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out, background 0.5s ease-in-out; /* Smooth transitions for underline */
+    animation: underlineGlow 1.5s ease-in-out infinite alternate; /* Continuous glowing effect */
+}
+
+/* Hover effect for underline expansion and glowing */
+.internship-responsibilities-title:hover::after {
+    transform: scaleX(1); /* Expand underline on hover */
+    transform-origin: bottom left; /* Start from left */
+    background: linear-gradient(90deg, #ff4081, #00bcd4); /* Keep the gradient color */
+}
+
+/* Pulse effect on hover for the text */
+.internship-responsibilities-title:hover {
+    animation: glowingText 1s ease-in-out infinite alternate; /* Glowing text on hover */
+    transform: scale(1.1); /* Slightly enlarge text */
+}
+
+/* Underline Glow Animation */
+@keyframes underlineGlow {
+    0% {
+        background: linear-gradient(90deg, #ff4081, #00bcd4);
+        width: 0%;
+    }
+    50% {
+        width: 80%;
+        background: linear-gradient(90deg, #ff4081, #ff73fa);
+    }
+    100% {
+        width: 100%;
+        background: linear-gradient(90deg, #ff4081, #00bcd4);
+    }
+}
+
+/* Fade-in animation for the heading */
+@keyframes headingAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Start from top */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move to its normal position */
+    }
+}
+
+/* Styling the Duration Paragraph with Bold and Neon Effects */
+.internship-duration {
+    font-size: 2em; /* Increase the font size for more emphasis */
+    font-weight: bold; /* Bold text for stronger impact */
+    color: #fff; /* White text color */
+    text-transform: uppercase; /* Uppercase for a bold appearance */
+    letter-spacing: 2px; /* Spacing between letters for better clarity */
+    position: relative; /* Position for pseudo-element */
+    margin-bottom: 30px; /* More space below */
+    padding: 20px 30px; /* Increased padding for a modern feel */
+    border-radius: 20px; /* Rounded corners for smoothness */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Deep shadow for more depth */
+    background: transparent; /* Transparent background */
+    animation: glowingText 2s ease-in-out infinite alternate, glowBackground 5s ease-in-out infinite alternate; /* Multiple animations */
+}
+
+/* Advanced Animation for glowing text effect */
+@keyframes glowingText {
+    0% {
+        text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081, 0 0 50px #ff4081, 0 0 60px #ff4081, 0 0 70px #ff4081;
+    }
+    100% {
+        text-shadow: 0 0 25px #ff4081, 0 0 50px #ff4081, 0 0 75px #ff4081, 0 0 100px #ff4081, 0 0 120px #ff4081;
+    }
+}
+
+/* Add Background Glowing Effect (for added flair) */
+@keyframes glowBackground {
+    0% {
+        background-color: rgba(255, 64, 129, 0.2);
+        box-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081;
+    }
+    50% {
+        background-color: rgba(255, 64, 129, 0.4);
+        box-shadow: 0 0 30px #ff4081, 0 0 60px #ff4081, 0 0 80px #ff4081;
+    }
+    100% {
+        background-color: rgba(255, 64, 129, 0.6);
+        box-shadow: 0 0 50px #ff4081, 0 0 100px #ff4081, 0 0 150px #ff4081;
+    }
+}
+
+/* Hover Effect to Scale and Intensify the Glow */
+.internship-duration:hover {
+    animation: glowingText 1.5s ease-in-out infinite alternate; /* More intense glow on hover */
+    color: #ff4081; /* Change text color to neon pink */
+    text-shadow: 0 0 30px #ff4081, 0 0 60px #ff4081, 0 0 90px #ff4081, 0 0 120px #ff4081, 0 0 150px #ff4081; /* Stronger glow */
+    transform: scale(1.2); /* Increase size */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7); /* Deep shadow effect on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Glowing underline effect with pulsing animation */
+.internship-duration::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Position slightly below the text */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff4081; /* Neon underline color */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out; /* Smooth transition for underline expansion */
+    animation: pulseUnderline 1.5s infinite alternate; /* Pulse underline effect */
+}
+
+/* Show underline when hovered */
+.internship-duration:hover::after {
+    transform: scaleX(1); /* Show the underline */
+    transform-origin: bottom left; /* Start the underline from left */
+}
+
+/* Pulse the underline with animation */
+@keyframes pulseUnderline {
+    0% {
+        transform: scaleX(0.1);
+    }
+    50% {
+        transform: scaleX(0.6);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* Add text shadow on hover for stronger effect */
+.internship-duration:hover {
+    color: #ff4081; /* Text color changes to neon pink */
+    text-shadow: 0 0 40px #ff4081, 0 0 60px #ff4081, 0 0 80px #ff4081, 0 0 100px #ff4081; /* Stronger shadow */
+}
+
+/* Optional: Adding a pulsing effect on the text */
+.internship-duration:active {
+    animation: glowingText 1s ease-in-out infinite alternate; /* Quick pulsing effect on click */
+}
+
+/* Styling for the responsibility list */
+.internship-responsibilities-list {
+    list-style: none; /* Remove default bullets */
+    padding-left: 20px; /* Add space for list items */
+    margin-top: 20px; /* Add space above the list */
+}
+
+/* Styling individual list items */
+.responsibility-item {
+    font-size: 1.2em; /* Make the text slightly larger */
+    color: #fff; /* White text color */
+    position: relative; /* Position for adding icons */
+    margin-bottom: 15px; /* Space between each item */
+    padding-left: 30px; /* Add space for icons */
+    line-height: 1.6; /* Improve readability */
+    font-family: 'Arial', sans-serif; /* Use a clean, readable font */
+    animation: glowingText 2s ease-in-out infinite alternate; /* Glowing effect for text */
+}
+
+/* Add icon before each list item */
+.responsibility-item::before {
+    content: url('https://img.icons8.com/ios/50/000000/ok.png'); /* Add a checkmark icon */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%); /* Center the icon vertically */
+    width: 20px;
+    height: 20px;
+}
+
+/* Animation for glowing text effect */
+@keyframes glowingText {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff4081, 0 0 15px #ff4081;
+    }
+    100% {
+        text-shadow: 0 0 5px #ff4081, 0 0 10px #ff4081, 0 0 15px #ff4081;
+    }
+}
+
+/* Hover effect for list items */
+.responsibility-item:hover {
+    color: #ff4081; /* Change text color to glowing pink */
+    text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081; /* Stronger glowing effect */
+    transform: scale(1.05); /* Slightly enlarge the item */
+    cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+}
+
+/* Adding a glowing underline on hover */
+.responsibility-item:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff4081; /* Glowing underline color */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+/* Show underline when hovered */
+.responsibility-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* Enhanced Styling for the responsibility list */
+.internship-responsibilities-list {
+    list-style: none; /* Remove default bullets */
+    padding-left: 20px; /* Add space for list items */
+    margin-top: 20px; /* Add space above the list */
+    opacity: 0.8; /* Slight opacity for background */
+}
+
+/* Enhanced individual list items */
+.responsibility-item {
+    font-size: 1.2em; /* Make the text slightly larger */
+    color: #fff; /* White text color */
+    position: relative; /* Position for adding icons */
+    margin-bottom: 15px; /* Space between each item */
+    padding-left: 35px; /* Add space for icons */
+    line-height: 1.6; /* Improve readability */
+    font-family: 'Arial', sans-serif; /* Use a clean, readable font */
+    animation: glowingText 2s ease-in-out infinite alternate; /* Glowing effect for text */
+    cursor: pointer; /* Indicate interactivity */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    border-left: 4px solid transparent; /* Add left border for effect */
+    padding-left: 25px; /* Add space for the border */
+}
+
+/* Add icons before each list item */
+.responsibility-item::before {
+    content: url('https://img.icons8.com/ios/50/000000/ok.png'); /* Add a checkmark icon */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%); /* Center the icon vertically */
+    width: 20px;
+    height: 20px;
+}
+
+/* Glowing text animation */
+@keyframes glowingText {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff4081, 0 0 15px #ff4081;
+    }
+    100% {
+        text-shadow: 0 0 5px #ff4081, 0 0 10px #ff4081, 0 0 15px #ff4081;
+    }
+}
+
+/* Hover effects for list items */
+.responsibility-item:hover {
+    color: #ff4081; /* Change text color to glowing pink */
+    transform: scale(1.1); /* Slightly enlarge the item */
+    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.6); /* Shadow to create a glowing effect */
+    text-shadow: 0 0 20px #ff4081, 0 0 30px #ff4081; /* Stronger glowing effect */
+    border-left: 4px solid #ff4081; /* Glowing left border */
+    animation: pulse 1.5s ease-out infinite; /* Pulse effect */
+}
+
+/* Pulse effect for hover */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Glowing underline effect on hover */
+.responsibility-item:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff4081; /* Glowing underline color */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+/* Show underline when hovered */
+.responsibility-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Enhance list item spacing */
+.responsibility-item {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4); /* Slight background for item */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between items */
+}
+
+/* Add shadow effects to list items */
+.responsibility-item {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow to each item */
+}
+
+/* Smooth transition for shadow and color changes */
+.responsibility-item:hover {
+    box-shadow: 0 4px 20px rgba(255, 64, 129, 0.6);
+}
+
+
+
+/* Styling the Internship Section */
+#internship {
+    position: relative;
+    padding: 50px 20px; /* Add padding for spacing */
+    text-align: center; /* Center align text */
+    overflow: hidden; /* Contain background elements */
+    color: #fff; /* White text for contrast */
+    z-index: 1; /* Layer above background */
+}
+
+/* Background Video Styling */
+#internship video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the background */
+    z-index: -1; /* Behind the content */
+    opacity: 0.4; /* Dim the video for better readability */
+}
+
+/* Styling the Main Heading */
+#internship .internship-content span {
+    display: inline-block; /* For animations */
+    font-size: 3em; /* Large text for emphasis */
+    font-weight: bold;
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 3px; /* Add spacing between letters */
+    background: linear-gradient(90deg, #ff4081, #00bcd4); /* Gradient color for text */
+    -webkit-background-clip: text; /* Use gradient for text */
+    -webkit-text-fill-color: transparent; /* Make the background clip visible */
+    animation: glowingHeading 2s ease-in-out infinite alternate, fadeIn 1s ease-out; /* Glow and fade animations */
+}
+
+/* Glowing Heading Animation */
+@keyframes glowingHeading {
+    0% {
+        text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081;
+    }
+    100% {
+        text-shadow: 0 0 20px #00bcd4, 0 0 40px #00bcd4, 0 0 60px #00bcd4;
+    }
+}
+
+/* Fade-in Animation for the Heading */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adding Decorative Lines Below the Heading */
+#internship .internship-content::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 5px;
+    margin: 20px auto 0; /* Center below the heading */
+    background: linear-gradient(90deg, #ff4081, #00bcd4); /* Gradient underline */
+    animation: underlineExpand 1s ease-in-out forwards; /* Add animation */
+}
+
+/* Expand Animation for Underline */
+@keyframes underlineExpand {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+/* Styling the Internship Section with a Glowing Border */
+#internship {
+    position: relative;
+    padding: 50px 20px;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    z-index: 1;
+}
+
+/* Background Video Styling */
+#internship video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* Styling the Internship Content Box */
+.internship-content {
+    display: inline-block;
+    position: relative;
+    padding: 30px;
+    margin: 20px auto;
+    color: white;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    border: 5px solid; /* Initial border */
+    border-image-source: linear-gradient(90deg, #ff4081, #00bcd4); /* Gradient for the border */
+    border-image-slice: 1;
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.5), 0 0 30px rgba(0, 188, 212, 0.5); /* Glowing shadow */
+    animation: borderGlow 3s infinite alternate; /* Animation for glowing effect */
+}
+
+/* Glowing Border Animation */
+@keyframes borderGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 64, 129, 0.8), 0 0 20px rgba(0, 188, 212, 0.8);
+        border-image-source: linear-gradient(90deg, #ff4081, #00bcd4);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 64, 129, 1), 0 0 40px rgba(0, 188, 212, 1);
+        border-image-source: linear-gradient(90deg, #00bcd4, #ff4081);
+    }
+}
+
+/* Main Heading Styling */
+.internship-content span {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    background: linear-gradient(90deg, #ff4081, #00bcd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.8), 0 0 20px rgba(0, 188, 212, 0.8);
+}
+/* Styling for the Internship Company Heading */
+.internship-company {
+    font-size: 2.2em; /* Prominent font size */
+    font-weight: bold; /* Strong bold text */
+    color: #fff; /* Clear white text for readability */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    letter-spacing: 2px; /* Slight spacing for better readability */
+    position: relative; /* Position for effects */
+    margin-bottom: 20px; /* Space below */
+    padding: 15px 25px; /* Padding for spacing around text */
+    background: linear-gradient(90deg, #ff6f61, #42a5f5); /* Vibrant gradient background */
+    border: 3px solid #42a5f5; /* Solid gradient-like border */
+    border-radius: 10px; /* Rounded edges for a smooth look */
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+    box-shadow: 0 10px 20px rgba(66, 165, 245, 0.5); /* Glowing box shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    overflow: hidden; /* Ensure no overflow from the text or background */
+}
+
+/* Add a glowing animation to the background */
+.internship-company::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 111, 97, 0.4), rgba(66, 165, 245, 0.2));
+    z-index: -1;
+    filter: blur(10px);
+    animation: glowingBg 3s infinite alternate;
+    border-radius: 10px;
+}
+
+/* Glowing background animation */
+@keyframes glowingBg {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+/* Hover effect for heading */
+.internship-company:hover {
+    transform: scale(1.1); /* Slight enlargement */
+    box-shadow: 0 15px 30px rgba(255, 111, 97, 0.7), 0 15px 30px rgba(66, 165, 245, 0.7); /* Enhanced glow */
+    border-color: #ff6f61; /* Change border color on hover */
+}
+
+
+/* Hover Effect for Heading */
+.internship-company:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 10px 20px rgba(255, 64, 129, 0.5), 0 10px 20px rgba(0, 188, 212, 0.5); /* Add a hover shadow */
+    text-shadow: 0 0 20px rgba(255, 64, 129, 1), 0 0 40px rgba(0, 188, 212, 1); /* Enhance the glowing effect */
+}
+/* Contact Section Styling */
+.contact-section {
+    background: radial-gradient(circle at center, #1e3c72, #2a5298, #000); /* Radial gradient */
+    padding: 70px 20px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden; /* For animations */
+    position: relative;
+}
+
+/* Animated Gradient Background */
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #ff4081 20%, transparent);
+    animation: pulse 6s infinite alternate;
+    z-index: 1;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+}
+
+/* Dynamic Particle Effect */
+.contact-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('particles.png') center/cover no-repeat;
+    animation: floatParticles 15s linear infinite;
+    z-index: 0;
+}
+
+@keyframes floatParticles {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Ensure text visibility */
+.contact-heading, .contact-subheading, .contact-form input, .contact-form textarea {
+    z-index: 2; /* Ensure these elements are above the background effects */
+}
+
+/* Optional: Add a subtle glow effect to headings */
+.contact-heading, .contact-subheading {
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.8), 0 0 20px rgba(0, 188, 212, 0.8);
+}
+
+/* Optional: Add a subtle glow effect to form inputs */
+.contact-form input, .contact-form textarea {
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1), inset 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+
+/* Heading */
+.contact-heading {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0 0 15px #ff4081, 0 0 25px #00bcd4;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 15px #ff4081, 0 0 20px #00bcd4;
+    }
+    to {
+        text-shadow: 0 0 25px #ff4081, 0 0 35px #00bcd4;
+    }
+}
+
+/* Subheading */
+.contact-subheading {
+    font-size: 1.5em;
+    margin-bottom: 60px;
+    color: #d1e9ff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Form Styling */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 2; /* Above background animation */
+    animation: slideUp 2s ease-out;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1.1em;
+    outline: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #d1e9ff;
+    font-style: italic;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border: 2px solid #ff4081;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 25px rgba(255, 64, 129, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Submit Button */
+.submit-btn {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #ff4081, #00bcd4);
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 20px rgba(255, 64, 129, 0.7), inset 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(90deg, #00bcd4, #ff4081);
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 10px 30px rgba(255, 64, 129, 0.9);
+}
+
+/* Decorative Floating Elements */
+.floating-icon {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 50px;
+    height: 50px;
+    background: #ff4081;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.7);
+    animation: bounce 4s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+/* Heading Styling */
+.contact-heading {
+    font-size: 3.5em; /* Increased size for emphasis */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: linear-gradient(90deg, #ff4081, #00bcd4, #ff4081); /* Gradient Text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+    animation: gradientMove 3s infinite alternate; /* Gradient movement */
+    text-shadow: 0 0 20px rgba(255, 64, 129, 0.8), 0 0 30px rgba(0, 188, 212, 0.8);
+}
+
+/* Glow Effect */
+.contact-heading::before,
+.contact-heading::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    top: -5px;
+    left: -5px;
+    z-index: -1;
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.8), 0 0 20px rgba(0, 188, 212, 0.8);
+    animation: glowPulse 2s infinite alternate;
+}
+
+.contact-heading::after {
+    border: none;
+    top: 5px;
+    left: 5px;
+    box-shadow: 0 0 25px rgba(255, 64, 129, 0.6), 0 0 35px rgba(0, 188, 212, 0.6);
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Glow Pulse Animation */
+@keyframes glowPulse {
+    from {
+        box-shadow: 0 0 15px rgba(255, 64, 129, 0.8), 0 0 20px rgba(0, 188, 212, 0.8);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(255, 64, 129, 0.8), 0 0 35px rgba(0, 188, 212, 0.8);
+    }
+}
+/* Subheading Styling */
+.contact-subheading {
+    font-size: 1.5em; /* Increased size for better readability */
+    color: #d1e9ff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Glowing Effect */
+.contact-subheading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 10px;
+    background: linear-gradient(90deg, #ff4081, #00bcd4);
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.6), 0 0 30px rgba(0, 188, 212, 0.6);
+    opacity: 0.7;
+    animation: glowingUnderline 3s ease-in-out infinite;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glowing Underline Animation */
+@keyframes glowingUnderline {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+/* Contact Form Styling */
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.2); /* Light background with transparency */
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease;
+}
+
+/* Input and Textarea Styling */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Placeholder Text Styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #d1e9ff;
+    opacity: 0.8;
+}
+
+/* Focus Effect */
+.form-group input:focus,
+.form-group textarea:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ff4081;
+    box-shadow: 0 10px 30px rgba(255, 64, 129, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    padding: 18px 35px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(135deg, #ff4081, #00bcd4);
+    cursor: pointer;
+    transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 64, 129, 0.6);
+}
+
+/* Hover Effect for Button */
+.submit-btn:hover {
+    background: linear-gradient(135deg, #00bcd4, #ff4081);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 188, 212, 0.6);
+}
+
+/* Animated Input Focus */
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+    color: #ff4081;
+    text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
+}
+
+/* Add glow effect to form */
+.contact-form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Add smooth fade-in animation */
+.contact-form {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Enhanced Submit Button Styling */
+.submit-btn {
+    padding: 18px 35px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #ff4081, #00bcd4);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.4s ease, transform 0.3s ease, box-shadow 0.4s ease;
+    box-shadow: 0 10px 30px rgba(255, 64, 129, 0.6);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Hover Effect with Glowing Border */
+.submit-btn:hover {
+    background: linear-gradient(135deg, #00bcd4, #ff4081);
+    transform: translateY(-5px);  /* Lifts the button */
+    box-shadow: 0 15px 40px rgba(0, 188, 212, 0.6);
+    animation: pulsate 1.2s infinite ease-in-out; /* Pulsating effect */
+}
+
+/* Pulsating Effect */
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(255, 64, 129, 0.6);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 20px 60px rgba(255, 64, 129, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(255, 64, 129, 0.6);
+    }
+}
+
+/* Button Glow Effect with Expanding Circle */
+.submit-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transition: width 0.3s ease, height 0.3s ease;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: -1; /* Ensure it's behind the text */
+}
+
+/* Expanding Glow on Hover */
+.submit-btn:hover::before {
+    width: 400%;
+    height: 400%;
+    opacity: 1;
+}
+
+/* Active State Animation */
+.submit-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.8);
+    animation: none;  /* Stop pulsating when clicked */
+}
+
+/* Button Border Glow */
+.submit-btn:hover {
+    border: 2px solid #fff;
+    box-shadow: 0 10px 40px rgba(255, 64, 129, 0.6);
+}
